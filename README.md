@@ -1,18 +1,18 @@
 # Slack GPT Bot
 This repository contains a Python-based Slack GPT Bot that runs [Code Interpreter API](https://github.com/shroominic/codeinterpreter-api)
 
-## Features
-- Extract URLs from user messages
-- Scrape webpage content from URLs
-- Integrate with OpenAI's GPT-4 to answer questions
-- Maintain conversation context in a threaded format
-- Socket mode integration with Slack
+## Features (Same as CodeInterpreterAPI)
+Dataset Analysis, Stock Charting, Image Manipulation, ....
+Internet access and auto Python package installation
+Input text + files -> Receive text + files
+Conversation Memory: respond based on previous inputs 
+
 ## Dependencies
 - Python 3.6 or later
 - beautifulsoup4
 - slack-bolt
 - slack-sdk
-- openai
+- codeinterpreterapi
 - requests
 
 See `requirements.txt`.
