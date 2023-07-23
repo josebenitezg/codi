@@ -1,0 +1,9 @@
+slack-bolt
+slack-sdk
+requests
+beautifulsoup4
+openai
+tiktoken
+trafilatura
+python-dotenv
+codeinterpreterapi
