@@ -22,7 +22,7 @@ See `requirements.txt`.
 
 ```bash
 git clone https://github.com/josebenitezg/codi
-cd slack-gpt-bot
+cd codi
 ```
 2. Install the required packages:
 
@@ -56,7 +56,7 @@ Before you can run the Slack GPT Bot, you need to configure the appropriate perm
 1. Start the bot:
 
 ```
-python panchingpt.py
+python codi.py
 ```
 2. Invite the bot to your desired Slack channel.
 3. Mention the bot in a message and ask a question (including any URLs). The bot will respond with an answer, taking into account any extracted content from URLs.
