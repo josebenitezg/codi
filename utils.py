@@ -26,53 +26,6 @@ def update_chat(app, channel_id, reply_message_ts, response_text):
         ts=reply_message_ts,
         text=response_text
     )
-# def process_conversation_history(conversation_history, bot_user_id):
-#     for message in conversation_history['messages'][:-1]:
-#         message_text = process_message(message, bot_user_id)
-#         if message_text:
-#             return message_text
-    
-#     slack_files = []
-
-#     for message in conversation_history['messages'][:-1]:
-#         if 'files' not in message:
-#             break
-#         for file in message.get('files', []):
-#             url = file.get('url_private')
-#             file_name = file.get('name')
-#             try:
-#                 # Send HTTP request to URL and save the response from server in a response object
-#                 response = requests.get(url, headers=headers)
-#                 response.raise_for_status()
-#             except requests.exceptions.HTTPError as err:
-#                 logger.info(f"Failed to download the file. HTTP Status Code: {response.status_code}, Error: {err}")
-#                 continue
-#             except Exception as err:
-#                 logger.info(f"An error occurred: {err}")
-#                 continue
-
-#             # Write the content of the response (the data the server returned)
-#             with open(file_name, 'w') as file_obj:
-#                 file_obj.write(response.text)
-#             logger.info("File downloaded successfully")
-#             slack_files.append(file_name)
-#         return slack_files
-    # slack_files = []    
-    # for message in conversation_history['messages'][:-1]:
-    #         if 'files' in message:
-    #             for file in message['files']:
-    #                 url = file['url_private']
-    #                 # Send HTTP request to URL and save the response from server in response object
-    #                 response = requests.get(url, headers=headers)
-    #                 # Write the content of the response (the data the server returned)
-    #                 if response.status_code == 200:
-    #                     file_name = file['name']
-    #                     with open(file_name, 'w') as file:
-    #                         file.write(response.text)
-    #                     logger.info("File downloaded successfully")
-    #                     slack_files.append(file_name)
-    #                 else:
-    #                     logger.info("Failed to download the file. HTTP Status Code: " + str(response.status_code))
 
 def process_conversation_history(conversation_history, bot_user_id):
     slack_files = []
