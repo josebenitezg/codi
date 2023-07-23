@@ -1,14 +1,12 @@
-import logging
-from dotenv import load_dotenv
-from slack_bolt import App
-from slack_bolt.adapter.socket_mode import SocketModeHandler
-from slack_sdk import WebClient
-import requests
-
 import asyncio
+from dotenv import load_dotenv
+
+from slack_bolt import App
+from slack_sdk import WebClient
+from slack_bolt.adapter.socket_mode import SocketModeHandler
 
 # Only needed for local development
-load_dotenv()
+# load_dotenv()
 
 from utils import (
     SLACK_APP_TOKEN, 
@@ -47,7 +45,7 @@ def command_handler(body, context):
         
         slack_messages, slack_files = process_conversation_history(conversation_history, bot_user_id)
 
-        # Process messages to run codeinterpreter
+        # Process messages and files form slack to run codeinterpreter
         response = asyncio.run(codeinterpreter(slack_messages, slack_files))
         
         update_chat(app, channel_id, reply_message_ts, response.content)
