@@ -1,5 +1,5 @@
 # Slack Code Interpreter Bot
-This repository contains a Python-based Slack GPT Bot that runs [Code Interpreter API](https://github.com/shroominic/codeinterpreter-api)
+This repository contains a Python-based Slack Code Interpreter Bot that runs [Code Interpreter API](https://github.com/shroominic/codeinterpreter-api)
 
 <p align="center" width="100%">
   <img src="./assets/codi.png" style="width: 200px; height:200px; display: block; margin: auto; border-radius: 50%;">
