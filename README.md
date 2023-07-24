@@ -64,3 +64,7 @@ python codi.py
 ```
 2. Invite the bot to your desired Slack channel.
 3. Mention the bot in a message and ask a question (including any URLs). The bot will respond with an answer, taking into account any extracted content from URLs.
+
+<p align="center" width="20%">
+  <img src="./assets/demo_btc.png" style="display: block; margin: auto;">
+</p>
