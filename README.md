@@ -44,7 +44,7 @@ See below how to get those.
 
 
 ## Configuring Permissions in Slack
-Before you can run the Slack GPT Bot, you need to configure the appropriate permissions for your Slack bot. Follow these steps to set up the necessary permissions:
+Before you can run the Slack Bot, you need to configure the appropriate permissions for your Slack bot. Follow these steps to set up the necessary permissions:
 
 1. Create [Slack App](https://api.slack.com/authentication/basics)
 2. Go to your [Slack API Dashboard](https://api.slack.com/apps) and click on the app you created for this bot.
