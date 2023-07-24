@@ -89,6 +89,26 @@ def augment_user_message(user_message, url_list):
     user_message = user_message + "\n" + all_url_content
     return user_message
 
+# Delete list of Files
+def delete_files(*file_lists):
+    for file_list in file_lists:
+        for file_obj_or_path in file_list:
+            file_path = None
+            try:
+                # If the item is a File object, try to get its name
+                if hasattr(file_obj_or_path, 'name'):
+                    file_path = file_obj_or_path.name
+                # If the item is a string, assume it's already a file path
+                else:
+                    file_path = file_obj_or_path
+
+                os.remove(file_path)
+                print(f"{file_path} has been deleted successfully.")
+            except FileNotFoundError:
+                print(f"File {file_path} not found.")
+            except Exception as e:
+                print(f"An error occurred while deleting {file_path}: {e}")
+
 async def codeinterpreter(user_input, slack_files):
     # create a session
     session = CodeInterpreterSession()
@@ -110,5 +130,3 @@ async def codeinterpreter(user_input, slack_files):
     await session.astop()
     
     return response
-
-

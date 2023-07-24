@@ -6,7 +6,7 @@ from slack_sdk import WebClient
 from slack_bolt.adapter.socket_mode import SocketModeHandler
 
 # Only needed for local development
-# load_dotenv()
+load_dotenv()
 
 from utils import (
     SLACK_APP_TOKEN, 
@@ -14,7 +14,8 @@ from utils import (
     WAIT_MESSAGE,
     update_chat,
     process_conversation_history,
-    codeinterpreter
+    delete_files,
+    codeinterpreter,
     )
 
 app = App(token=SLACK_BOT_TOKEN)
@@ -57,6 +58,8 @@ def command_handler(body, context):
             thread_ts=thread_ts,
             file=f'{file}'
             )
+        print(response.files)
+        delete_files(response.files, slack_files)
         
     except Exception as e:
         print(f"Error: {e}")
