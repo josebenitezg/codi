@@ -1,4 +1,4 @@
-# Slack GPT Bot
+# Slack Code Interpreter Bot
 This repository contains a Python-based Slack GPT Bot that runs [Code Interpreter API](https://github.com/shroominic/codeinterpreter-api)
 
 <p align="center" width="100%">
